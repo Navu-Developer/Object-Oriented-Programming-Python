@@ -3,42 +3,49 @@ import os
 
 def main():
     keepAlive = 1
-    dll.append(2)
-    dll.append(3)
-    dll.append(5)
-    dll.append(10)
-    dll.append(4)
-    dll.append(1)
     while keepAlive == 1:
         os.system("clear")
         print("="*36)
         print("\tDOUBLE LINKED LIST")
+        print("\nCode\t: Python3")
         print("="*36)
-        print("1. tambah data depan")
-        print("2. tambah data belakang")
-        print("3. tambah data pada index pilihan")
-        print("4. tampilkan data")
-        print("5. panjang data")
-        print("6. hapus data berdasarkan index")
-        print("7. tampilkan data ganjil")
-        print("8. tampilkan data genap")
-        print("9. operasi aritmatika")
-        print("0. exit")
+        print("1.)\ttambah data (depan)")
+        print("2.)\ttambah data (belakang)")
+        print("3.)\ttambah data (index)")
+        print("4.)\ttampilkan data (semua)")
+        print("5.)\tpanjang data")
+        print("6.)\thapus data (index)")
+        print("7.)\ttampilkan data (ganjil)")
+        print("8.)\ttampilkan data (genap)")
+        print("9.)\toperasi aritmatika (+ - x :)")
+        print("0.)\texit")
         choose = str(input("--> "))
         if choose == "1":
+            print("masukan nilai input")
             dll.prepend(str(input("data --> ")))
             continue
         if choose == "2":
+            print("masukan nilai input")
             dll.append(str(input("data --> ")))
             continue
         if choose == "3":
             os.system("clear")
-            index = int(input("index --> "))
-            data = str(input("data --> "))
-            dll.addElement(index, data)
-            skip = input()
+            print("data sekarang")
+            print(dll.showData())
+            index = str(input("index (0-%d)\t--> "%(dll.length())))
+            data = str(input("data\t\t--> "))
+            if bool(index) is False:
+                print("index tidak bisa kosong")
+                pass
+            else:
+                if int(index) > dll.length():
+                    print("index lebih besar dari panjang data")
+                    pass
+                else:
+                    dll.addElement(int(index), data)
             continue
         if choose == "4":
+            print("data sekarang")
             print(dll.showData())
             skip = input()
         if choose == "5":
@@ -46,17 +53,28 @@ def main():
             skip = input()
             continue
         if choose == "6":
-            print("data sekarang")
-            print(dll.showData())
-            index = int(input("hapus index (0-%d) --> "%(dll.length()-1)))
-            if index>dll.length():
-                print("range index hanya (0-%d)"%(dll.length()-1))
+            if dll.length() == 0:
+                print("belum ada data")
                 pass
             else:
-                dll.deleteAtIndex(index-1)
-                print("\ndata berhasil di hapus")
-                print("data anda sekarang")
+                print("data sekarang")
                 print(dll.showData())
+                index = str(input("hapus index (0-%d) --> "%(dll.length()-1)))
+                if bool(index) is False:
+                    print("index tidak bisa kosong")
+                    pass
+                else:
+                    if int(index)>dll.length()-1:
+                        print("range index hanya (0-%d)"%(dll.length()-1))
+                        pass
+                    else:
+                        os.system("clear")
+                        print("\ndata berhasil di hapus")
+                        print("data sebelumnya")
+                        print(dll.showData())
+                        dll.deleteAtIndex(int(index)-1)
+                        print("data anda sekarang")
+                        print(dll.showData())
             skip = input()
         if choose == "7":
             print("DATA GANJIL")
@@ -68,6 +86,7 @@ def main():
             skip = input()
         if choose == "9":
             os.system("clear")
+            print("Jika tipe data String (teks) maka value=0")
             penugasan = ''
             print("ARITMATIKA LINKED LIST")
             print("Anda mempunyai data : ")
@@ -84,11 +103,25 @@ def main():
             if operasional == "3":
                 penugasan = "*"
             if operasional == "4":
-                penugasan = ":"
-            index1 = int(input("angka 1, index --> "))
-            index2 = int(input("angka 2, index --> "))
-            print("hasil : ",dll.aritmatika(penugasan, index1, index2))
-            skip = input()
+                penugasan = "//"
+            index1 = str(input("angka 1, index --> "))
+            index2 = str(input("angka 2, index --> "))
+            bo1 = bool(index1)
+            bo2 = bool(index2)
+            if (int(index1) or int(index2)) > dll.length()-1:
+                print("index tidak ada")
+                pass
+            else:
+                if int(operasional) > 4:
+                    print("tidak ada asignment")
+                    pass
+                else:
+                    if (bo1 and bo2) is False:
+                        print("angka 1 atau 2 tidak bisa kosong")
+                        pass
+                    else: 
+                        print("hasil : ",dll.aritmatika(penugasan, int(index1), int(index2)))
+                    skip = input()
             continue
         if choose == "0":
             keepAlive-=1
