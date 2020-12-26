@@ -1,5 +1,8 @@
 from node import Node
-# Bentuk data dari struktur data tree program BinartyTree.py
+
+# Binary Tree dari objek ini membentuk data yang tidak seimbang
+# Bentuk data dari struktur data tree program BinartyTreeV1.py
+
 #                 _____ROOT_____
 #   self.left--->/              \<---self.right
 #            data                data < child of
