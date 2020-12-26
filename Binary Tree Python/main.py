@@ -69,9 +69,6 @@ def main():
                     skip = input()
                 else:
                     t.deleteElement(int(data))
-        elif choose == "999":
-            if t.rootData() is None:
-                main()
         elif choose == "0":
             keepAlive-=1
 if __name__ == "__main__":
