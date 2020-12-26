@@ -96,13 +96,3 @@ class BinaryTree(object):
                 cur.right = newData
                 break 
             curIndex+=1
-
-t = BinaryTree()
-t.insertLeft(1)
-t.insertRight(9)
-t.insertLeft(1)
-t.insertRight(3)
-t.insertLeft(1)
-t.insertRight(6)
-t.insertChildOf(0, 7)
-t.printTree()
