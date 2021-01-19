@@ -1,1 +1,47 @@
+Bacalah dengan teliti pada tiap soalnya dan kerjakan soal berikut dengan Urut, Baik, Benar dan tidak boleh Mengarang !!! Kerjakan dalam 1 file Ms. Word dengan ketentuan notasi algoritmik diketik dalam word dan program python di Screenshot dari coding serta output hasil compile sesuai dengan urutan penomoran.
 
+1.	Buatlah notasi algoritmik serta coding python untuk prosedur menjumlahkan nilai paling atas dan nilai paling bawah pada Stack List dengan nama fungsinya adalah TambahAtasBawahNilaiStack(), kemudian tentukan bilangan total tersebut merupakan bilangan ganjil atau genap, serta merupakan kelipatan 3 atau tidak.	 			[Nilai 30]
+Contoh :
+Diketahui Stack List	= [2, 6, 3, 7, 4, 9, 1, 10, 22, 4]
+Nilai paling atas		= 22
+Nilai paling bawah		= 1
+Total Nilai atas bawah	= 23
+Termasuk bilangan 	= ganjil bukan kelipatan 3
+
+2.	Buatlah notasi algoritmik serta coding python untuk menampilkan nilai pada Queue List menampilkan nilai yang mempunyai kelipatan 3, sebutkan ada berapa elemen tersebut kemudian menghitung jumlah nilai dari kelipatan 3 tersebut hanya yang genap saja. Setelah itu, tentukan nilai maksimal dan nilai maksimal kedua dari deret. Berikan nama fungsinya yaitu cetakQList dengan parameter menyesuaikan dengan fungsi tersebut.		[Nilai 30]
+Contoh : 
+Inputkan banyak Queue list	= xxxxx		(misalkan diinput 4)
+Input Elemen ke – 1		= xx			(misal diinput 9)
+Input Elemen ke – 2		= xx			(misal diinput 1)
+Input Elemen ke – 3		= xx			(misal diinput 6)
+Input Elemen ke – 4		= xx			(misal diinput 12)
+
+
+Output Elemen ke – 1		= 9
+Output Elemen ke – 2		= 1
+Output Elemen ke – 3		= 6
+Output Elemen ke – 4		= 12
+
+Output Elemen Kelipatan 3 		= 9 6 12
+Banyak Elemen Kelipatan 3 		= 3
+Jumlah Elemen Kelipatan 3 Genap 	= 18		(didapat dari 6+12) 
+Nilai maksimum List Kelipatan 3		= 12
+Nilai maksimum kedua list kelipatan 3	= 9
+
+
+
+3.	Diketahui sebuah list A = 10 15 20 25
+Buatlah fungsi menggunakan representasi Double List dengan ketentuan : 
+a.	Tambahkan data (setelah node genap ke- ) yang telah ditentukan. 		[Nilai 25]
+Contoh : 
+Input 	= Tambahkan data setelah node genap ke-	= 2
+Input 	= Isikan data yang akan ditambahkan		= 16
+Output  	= 10 15 20 16 25
+
+
+b.	Hapus data pada awal node. 						[Nilai 15]
+Output  	= 15 20 16 25
+
+
+
+SELAMAT MENGERJAKAN
